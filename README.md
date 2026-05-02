@@ -22,6 +22,36 @@
 
 ## 🛠️ Tech Stack
 
+youtube-clone/
+├── manage.py # Django entry point
+├── server.js # Express.js server
+├── package.json # Node.js dependencies
+├── .gitignore
+├── Youtube/ # Django project settings (main config)
+├── home/ # Home app: feeds, video listing
+├── authy/ # Authentication logic
+├── profiles/ # User profiles, channels, subscriptions
+├── static/ # Frontend assets (CSS, JS, images)
+└── README.md
+
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Python 3.8+
+- Node.js 18.x + npm
+- PostgreSQL (optional, SQLite works for dev)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Tchakeu/youtube-clone.git
+   cd youtube-clone
+
+   
+
 | Layer       | Technology                                                                 |
 |-------------|----------------------------------------------------------------------------|
 | Backend API | ![Django](https://img.shields.io/badge/Django-092E20?logo=django) + DRF   |
