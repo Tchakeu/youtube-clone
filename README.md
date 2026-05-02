@@ -22,6 +22,16 @@
 
 ## 🛠️ Tech Stack
 
+| Layer       | Technology                                                                 |
+|-------------|----------------------------------------------------------------------------|
+| Backend API | ![Django](https://img.shields.io/badge/Django-092E20?logo=django) + DRF   |
+| Real-time   | ![Express.js](https://img.shields.io/badge/Express.js-000000?logo=express) |
+| Database    | PostgreSQL (default) / SQLite for dev                                      |
+| Frontend    | HTML5, CSS3, JavaScript (vanilla, located in `static/`)                   |
+| Auth        | JWT (Django REST Framework JWT) + `authy` module                          |
+
+## 📂 Project Structure
+
 youtube-clone/
 ├── manage.py # Django entry point
 ├── server.js # Express.js server
@@ -49,15 +59,3 @@ youtube-clone/
    ```bash
    git clone https://github.com/Tchakeu/youtube-clone.git
    cd youtube-clone
-
-   
-
-| Layer       | Technology                                                                 |
-|-------------|----------------------------------------------------------------------------|
-| Backend API | ![Django](https://img.shields.io/badge/Django-092E20?logo=django) + DRF   |
-| Real-time   | ![Express.js](https://img.shields.io/badge/Express.js-000000?logo=express) |
-| Database    | PostgreSQL (default) / SQLite for dev                                      |
-| Frontend    | HTML5, CSS3, JavaScript (vanilla, located in `static/`)                   |
-| Auth        | JWT (Django REST Framework JWT) + `authy` module                          |
-
-## 📂 Project Structure
