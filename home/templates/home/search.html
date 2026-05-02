@@ -1,0 +1,85 @@
+{% load static %}
+
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vibe Tube</title>
+    <link href="{% static 'css/style_test.css' %}" rel="stylesheet" type="text/css"/>
+    <!-- jQuery -->
+
+</head>
+<body>
+        {% include 'home/partials/header.html' %}
+<div class="container">
+    <div class="containers">
+    <div class="chips-wrapper" style="width: 75%;">
+        <div class="chip all">
+            <p>Tous</p>
+        </div>
+        <div class="chip">
+            <p>Shorts</p>
+        </div>
+        <div class="chip">
+            <p>Videos</p>
+        </div>
+        <div class="chip">
+            <p>Non visionnées</p>
+        </div>
+             <div class="chip">
+            <p>Regardées</p>
+        </div>
+        <div class="chip">
+            <p>Videos mises en ligne récem...</p>
+        </div>
+        <div class="chip">
+            <p>En direct</p>
+        </div>
+        <div class="chip">
+            <p>Playlist</p>
+        </div>
+
+
+    </div>
+</div>
+                    {% for x in video %}
+                    <div class="side-video-list ">
+
+                            <a href="{% url 'video_details' x.id %}" class="small-thumbnail">
+                                <video class="thumbnail"  style="width:97%"  muted preload="metadata" onmouseover="playVideoid(this)" onmouseout="pauseVideoid(this)">
+                                    <source src="http://localhost:3001/api/stream?video={{x.media}}"/>
+                                </video>
+                            </a>
+
+                        <!-- <a href="" class="small-thumbnail"><img src="{% static 'icons/thumbnail1.png' %}" alt=""></a> -->
+                        <div class="vid-info side">
+                            <a href="">{{x.author.user}}</a>
+                            <p  style=" font-size: 1.5rem;line-height: 2.6rem;font-weight: 400;">{{x.name}}</p>
+                            <span style="font-size: 0.8rem;line-height: 1.3rem;font-weight: 200;" >25k view</span>
+                            <div class="publisher">
+                                <img src="{{x.author.profile.profile_pic.url}}" alt="">
+                                <div>
+                                    <p>{{x.author.profile.user}}</p>
+                                </div>
+                            </div>
+                            <p style=" font-size: 0.9rem;line-height: 2.9rem;font-weight: 400;">{{x.description}}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+
+</div>
+
+
+
+
+
+
+
+
+<script src="{% static 'js/script-test.js' %}" ></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+
+
+.card-product-grid video {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Adjust for your video aspect ratio */
+  height: 215px
+}
+
+
+.card-product-grid {
+
+height: auto;
+
+}
+
+ /*  css du logoo du poster */
+ .card-profile{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    /*background-color: green; */
+
+}
+
+.card-profile .card-pic{
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card-container {
+  display: flex; /* Make the container a flex container */
+}
+
+/* .card-profile, .price {
+  flex: 0.25 /* Make each child div flexible and take up equal space */
+} */

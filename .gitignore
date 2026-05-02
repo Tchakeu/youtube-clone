@@ -1,0 +1,19 @@
+# Django
+__pycache__/
+*.pyc
+db.sqlite3
+.env
+
+media/*
+
+# Node / Express
+node_modules/
+npm-debug.log
+.env
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store

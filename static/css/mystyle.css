@@ -1,0 +1,30 @@
+
+
+
+.card-product-grid video {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Adjust for your video aspect ratio */
+  height: 215px
+}
+
+
+.card-product-grid {
+
+height: auto;
+
+}
+ /*  css du logoo du poster */
+ .card-profile{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: red;
+}
+
+.card-profile .card-pic{
+    height: 40%;
+    width: 40%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+

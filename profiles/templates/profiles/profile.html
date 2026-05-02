@@ -1,0 +1,52 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vibe Tube</title>
+    <link href="{% static 'css/style_test.css' %}" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+            {% include 'home/partials/header.html' %}
+    <div class="container">
+        <div class="head_profile">
+            <h1 class="nom">{{user_object}}</h1>
+
+            <span>@{{user_object}} &bull; <a href="">Creer une chaçine</a></span>
+                <p>{{user_followers}}</p>
+        </div>
+    <div class="containers">
+    <div class="chips-wrapper">
+
+                <div class="chip head_profile">
+                    <p><img class="google" src="{% static 'icons/user_change.png' %}" alt=""> changer de compte</p>
+                </div>
+                <div class="chip">
+                    <p><img class="google" src="{% static 'icons/google.png' %}" alt=""> compte Google</p>
+                </div>
+
+    </div>
+                    <div>
+                        <div>
+                            <h2>Historique</h2>
+                        </div>
+                         <div class="chips-wrapper">
+                            <div class="chip head_profiles ">
+                                <p>tout afficher</p>
+                            </div>
+                         </div>
+
+
+    </div>
+
+
+</div>
+
+
+<script src="{% static 'js/script-test.js' %}" ></script>
+</body>
+</html>

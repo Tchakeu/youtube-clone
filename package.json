@@ -1,0 +1,21 @@
+{
+  "name": "you",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "async-mutex": "^0.5.0",
+    "axios": "^1.6.8",
+    "express": "^4.19.2"
+  }
+}

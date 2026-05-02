@@ -1,0 +1,48 @@
+{% load static %}
+
+
+<div class="container">
+   <!-- <div class="banner">
+        <img src="{% static 'icons/banner.pngd' %}" alt="">
+    </div> -->
+    <div class="containers">
+    <div class="chips-wrapper">
+
+
+        <div class="chip all">
+            <p>Tous</p>
+        </div>
+        {% for tag in tag %}
+        <div class="chip">
+            <p>{{tag.title}}</p>
+        </div>
+        {% endfor %}
+
+
+    </div>
+</div>
+    <div class="list-container">
+        {% for x in video %}
+        <div class="vid-list">
+                <div class="video-container">
+                  <a href="{% url 'video_details' x.id %}">
+                    <video class="thumbnail"   muted preload="metadata" onmouseover="playVideo(this)" onmouseout="pauseVideo(this)">
+                      <source src="http://localhost:3001/api/stream?video={{x.media}}"/>
+                    </video>
+                  </a>
+                </div>
+            <div class="flex-div">
+                <img src="{{x.author.profile.profile_pic.url}}" alt="">
+                <div class="vid-info">
+                    <a href="">{{x.name}}</a>
+                    <p>easy tutorials</p>
+                    <p>15k views &bull; 2 days </p>
+                    <p>{{x.author.profile.bio}}</p>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+</div>
